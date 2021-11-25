@@ -1,0 +1,10 @@
+negacion -> El contrario de la normal
+Y -> si las dos son verdaderas es (VERDADERA)
+O -> si las dos son faltas es (FALSA)
+entonces -> Cuando la primera es verdadera pero la segunda es falsa entonces es (falsa)
+Si y solo si -> Cuando las dos tienen el valor de verdadero o Las dos tienen el valor de falso son verdaderas
+
+-- REGLAS --
+1. Se soluciona lo que esta en el parentesis (si existe una negacion detro del parentesis se hace primero la negacion)
+2. Se solucionan las conjuncion de O o Y
+3. Los condicionales	

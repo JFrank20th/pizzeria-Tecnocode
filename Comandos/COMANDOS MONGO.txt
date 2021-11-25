@@ -1,0 +1,7 @@
+show dbs -> ver bases de datos 
+db -> ver en que base de datos estamos
+use pruebadb -> Crear y usar una base de datos
+db.createCollection("user") -> Crear coleccion para la base de datos creada 
+show collections -> ver las colecciones que tiene la base de datos
+db.NOMBRE_ITEM.drop() -> Eliminar una colleccion 
+db.dropDatabase() -> Eliminar una base de datos

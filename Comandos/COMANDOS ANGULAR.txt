@@ -1,0 +1,55 @@
+ng new (nombre del proyecto)
+y
+damos enter
+
+cd (nombre de la carpeta)
+ng serve
+a todo le damos que si
+
+ng g c home/header  --> Creamos el componente para generar el menu de la aplicacion
+ng g c home/footer --> generamos el siguiente componente
+ng g c home/register  --> 
+ng g c home/login --> 
+
+ng g c board/save-task --> componentes para las tareas 
+ng g c board/list-task
+
+ng g c admin/register-user --> componentes para el admin
+ng g c admin/list-user
+ng g c admin/update-user
+ng g c admin/register-role
+
+importamos boostrap y js en index.html (principal)
+
+importamos el componente de app-header en el index que va a mostrar
+tambien el app-footer
+
+
+(bajar el servidor)
+importamos los servicios para que se comunique con el backend
+ng g s services/user
+ng g s services/board
+ng g s services/role
+ng g s services/token-interceptor -> el que valida los token
+
+lo vamos a importamosal en app.module.ts
+la ruta y luego en declarations
+
+ng g guard guard/auth el que va a validar si esa persona esta autenticado
+
+luego vamos a environments.ts
+y importamos la url
+
+vamos a app-routing.module.ts
+y colocamos las ruta que se van a utilizar 
+
+luego instalamos ng add @angular/material
+le damos que si a todo
+
+npm i @angular/flex-layout instalamos esta tambien 
+npm i @angular/cdk
+
+luego vamos a app.module.ts y importamos @angular/forms
+y @angular/common/http
+
+

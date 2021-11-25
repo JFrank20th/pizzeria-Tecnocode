@@ -1,0 +1,94 @@
+--Iniciar
+npm init
+
+--luego en el package.json
+"type": "module",
+
+--Instalar librerias
+npm i express mongoose cors dotenv jsonwebtoken bcrypt moment connect-multiparty
+
+--Actualiza auto
+npm i nodemon -D
+
+--Creamos un archivo .gitignore 
+para colocar ahi las carpetas que va a ignorar el git
+
+--Instalar librerias ya instaladas en otro pc
+init i
+
+--Creamos un archivo llamado .env 
+y le colocamos las variables de entorno
+
+--Creamos una carpeta llamada db
+y le creamos un archivo para hacer la conexion a la base de datos
+--Asignamos el async al inicio de la funcion y el await en donde comience el procedimiento
+
+--Luego vamos al index.js 
+
+--Luego lo ejecutamos
+npm start
+
+--Creamos una carpeta llamada models
+y le creamos user.js, role.js, board.js
+cada una de las pag .js es un modelo en la base de datos
+
+--Luego creamos la carpeta constrollers
+y le creamos user.js, role.js, board.js
+cada modelo tiene un controlador 
+
+--Luego creamos la carperta routes
+y le creamos user.js, role.js, board.js
+cada modelo tiene un controlador y una ruta
+
+-- luego vamos al index.js
+y importamos el rol que hicimos
+
+-- vamos al postman 
+y ponemos la url 
+http://localhost:3001/api/role/registerRole
+vamos a body
+raw
+ponemos JSON
+ponemos ponemos post
+ponemos lo que vamos a enviar
+
+--vamos a controllers en role.js
+y hacemos una consulta con role
+
+-- vamos a routes role
+y llamos la funcion get 
+
+-- vamos y probamos en el postman
+creamos la carpeta la sub-carpeta
+y guardamos los text ahi
+
+-- consultar un solo rol 
+en el controllers se hace la funcion
+
+-- despues vamos al router role
+he importamos la rura
+
+-- ahora vamos a actualizar
+vamos al controllers
+
+-- luego vamos al router y colocamos la ruta
+
+-- vamos al posman y ponemos put y la ruta 
+
+-- vamos al model de user y creamos el json Wtoken
+importamos la libreria jsonwebtoken
+importamos una libreria de fecha 
+
+-- luego vamos al constrollers user y arreglamos login
+
+-- importamos la libreria para encriptar la contraseña
+
+-- vamos al user y le ponemos un trychat y importamos json
+y moment
+
+-- creamos la carpeta middelware
+creamos auth y admin
+
+-- routes boart y hace la autorizacion importando auth
+
+
