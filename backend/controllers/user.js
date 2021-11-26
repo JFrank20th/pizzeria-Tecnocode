@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-const registerAdmin = async (res, req) => {
+const registerAdmin = async (req, res) => {
   if (
     !req.body.name ||
     !req.body.email ||
@@ -67,6 +67,7 @@ const registerAdmin = async (res, req) => {
   });
 
   const result = await userSchema.save();
+
   try {
     return res.status(200).json({
       token: jwt.sign(
@@ -103,6 +104,7 @@ const updateUser = async (req, res) => {
     return res.status(400).send({ message: "Datos incompletos" });
 
   const emailChange = await user.findById({ _id: req.body._id });
+  //console.log(emailChange);
   if (req.body.email !== emailChange.email)
     return res.status(400).send({ message: "El email nunca puede cambiarse" });
 
@@ -154,7 +156,7 @@ const login = async (req, res) => {
   if (!userLogin)
     return res.status(400).send({ message: "Email o constraseña incorrectas" });
 
-  const hash = await bcrypt.compare(req.body.password, userlogin.password);
+  const hash = await bcrypt.compare(req.body.password, userLogin.password);
   if (!hash)
     return res.status(400).send({ message: "Email o contraseña incorrectas" });
 

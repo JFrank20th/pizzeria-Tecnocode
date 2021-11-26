@@ -5,7 +5,7 @@ const registerRole = async (req, res) => {
     return res.status(400).send({ message: "informacion incompleta" });
 
   const existingRole = await role.findOne({ name: req.body.name });
-  if (existingRole) return res.status(400).send({ message: "este rol existe" });
+  if (existingRole) return res.status(400).send({ message: "este rol ya existe" });
 
   const roleSchema = new role({
     name: req.body.name,
@@ -43,7 +43,7 @@ const updateRole = async (req, res) => {
 
   return !roleUpdate
     ? res.status(400).send({ message: "error al actualizar" })
-    : res.status(200).send({ message: "role actualizado" });
+    : res.status(200).send({ message: "rol actualizado" });
 };
 
 const deleteRole = async (req, res) => {
@@ -51,7 +51,7 @@ const deleteRole = async (req, res) => {
 
   return !roleDetele
     ? res.status(400).send({ message: "error al eliminar rol" })
-    : res.status(200).send({ message: "role eliminado" });
+    : res.status(200).send({ message: "rol eliminado" });
 };
 
 export default { registerRole, listRole, updateRole, deleteRole};
